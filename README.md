@@ -66,8 +66,9 @@ The bot will continuously check for new Twitter posts and send them to your Disc
 
 This project is licensed under the MIT License.
 You are free to use and modify it, but you cannot sell it and must give credit to the original author.
-
+```
 💬 Support
 
 For questions or feedback, join our [[Discord community](https://discord.gg/fjRp77KhQt)].
+
 
