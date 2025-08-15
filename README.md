@@ -1,56 +1,75 @@
-# RSS to Discord Bot
+Ditto: Twitter Infographic Scraper
 
-A Python bot that fetches posts from an RSS feed and sends them to a Discord channel with role mentions and embedded images. Ideal for updates, announcements, and news feeds.
+Ditto is a Python script that scrapes infographics from Twitter and sends them to a Discord channel via a webhook. It's designed to automate the process of sharing visual content from Twitter to your Discord community.
 
-## Features
+Features
 
-- Fetches the latest posts from an RSS feed.
-- Sends messages as Discord embeds with optional images.
-- Adds a role mention at the top of each post.
-- Normalizes text to prevent duplicate lines.
-- Configurable check interval.
-- Keeps track of already posted content.
+Infographic Scraping: Extracts images and media from Twitter posts.
 
-## Prerequisites
+Discord Integration: Sends scraped content to a specified Discord channel using webhooks.
 
-- Python 3.10+
-- `requests`
-- `feedparser`
-- `python-dotenv`
+Automatic Posting: Continuously monitors Twitter for new infographics and posts them to Discord.
 
-Install dependencies:
+Prerequisites
 
-```bash
+Python 3.10+
+
+Required Python libraries:
+
+requests
+
+python-dotenv
+
+tweepy
+
+Pillow
+
+You can install the necessary libraries using:
+
 pip install -r requirements.txt
+
 Setup
 
-Clone the repository:
+Clone the Repository
 
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/Hexashuny/ditto.git
+cd ditto
 
 
-Create a .env file in the root directory with the following placeholders:
+Create a .env File
 
-# Discord
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_here
-DISCORD_ROLE_ID=your_role_id_here
-DISCORD_LINK=https://discord.gg/your_invite_here
+In the project root, create a .env file with the following content:
 
-# RSS feed
-RSS_FEED_URL=https://your_rss_feed_here.xml
+# Twitter API credentials
+TWITTER_CONSUMER_KEY=your_consumer_key
+TWITTER_CONSUMER_SECRET=your_consumer_secret
+TWITTER_ACCESS_TOKEN=your_access_token
+TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
 
-# Optional
+# Discord webhook URL
+DISCORD_WEBHOOK_URL=your_discord_webhook_url
+
+# Optional: Check interval in seconds
 CHECK_INTERVAL=60
 
 
-Place normalize_text.py in the same folder as the main script.
+Replace the placeholders with your actual Twitter API credentials and Discord webhook URL.
+
+Install Dependencies
+
+Ensure all required libraries are installed:
+
+pip install -r requirements.txt
 
 Usage
 
-Run the bot:
+Run the script to start scraping Twitter for infographics and posting them to your Discord channel:
 
-python scrapper.py
+python ditto.py
 
 
-The bot will continuously check the RSS feed at the interval set in .env and post new entries to Discord.
+The script will continue running, checking for new content at the interval specified in the .env file.
+
+License
+
+This project is licensed under the MIT License.
