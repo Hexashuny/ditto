@@ -69,5 +69,5 @@ You are free to use and modify it, but you cannot sell it and must give credit t
 
 💬 Support
 
-For questions or feedback, join our [Discord community](https://discord.gg/fjRp77KhQt).
+For questions or feedback, join our [[Discord community](https://discord.gg/fjRp77KhQt)].
 
