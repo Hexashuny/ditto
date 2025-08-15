@@ -1,45 +1,40 @@
-Ditto: Twitter Infographic Scraper
+# 🚀 Ditto: Twitter Infographic Scraper
 
-Ditto is a Python script that scrapes infographics from Twitter and sends them to a Discord channel via a webhook. It's designed to automate the process of sharing visual content from Twitter to your Discord community.
+[![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Features
+Ditto is a Python script that **scrapes infographics from Twitter** and sends them to a **Discord channel** via a webhook. It automates sharing visual content from Twitter to your community.
 
-Infographic Scraping: Extracts images and media from Twitter posts.
+---
 
-Discord Integration: Sends scraped content to a specified Discord channel using webhooks.
+## ✨ Features
 
-Automatic Posting: Continuously monitors Twitter for new infographics and posts them to Discord.
+- 🖼️ **Infographic Scraping**: Extract images and media from Twitter posts.
+- 🤖 **Discord Integration**: Send scraped content automatically using webhooks.
+- ⏱️ **Automatic Posting**: Continuously monitors Twitter for new content and posts it.
 
-Prerequisites
+---
 
-Python 3.10+
+## 🛠️ Prerequisites
 
-Required Python libraries:
+- **Python 3.10+**
+- Required libraries:
+  - `requests`
+  - `python-dotenv`
+  - `tweepy`
+  - `Pillow`
 
-requests
+Install all dependencies:
 
-python-dotenv
-
-tweepy
-
-Pillow
-
-You can install the necessary libraries using:
-
+```bash
 pip install -r requirements.txt
 
-Setup
-
-Clone the Repository
-
+⚙️ Setup
+1️⃣ Clone the Repository
 git clone https://github.com/Hexashuny/ditto.git
 cd ditto
 
-
-Create a .env File
-
-In the project root, create a .env file with the following content:
-
+2️⃣ Create a .env File
 # Twitter API credentials
 TWITTER_CONSUMER_KEY=your_consumer_key
 TWITTER_CONSUMER_SECRET=your_consumer_secret
@@ -53,23 +48,25 @@ DISCORD_WEBHOOK_URL=your_discord_webhook_url
 CHECK_INTERVAL=60
 
 
-Replace the placeholders with your actual Twitter API credentials and Discord webhook URL.
+Replace the placeholders with your actual credentials.
 
-Install Dependencies
-
-Ensure all required libraries are installed:
-
+3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-Usage
+▶️ Usage
 
-Run the script to start scraping Twitter for infographics and posting them to your Discord channel:
+Run the script:
 
 python ditto.py
 
 
-The script will continue running, checking for new content at the interval specified in the .env file.
+The bot will continuously check for new Twitter posts and send them to your Discord channel.
 
-License
+📜 License
 
 This project is licensed under the MIT License.
+You are free to use and modify it, but you cannot sell it and must give credit to the original author.
+
+💬 Support
+
+For questions or feedback, join our [Discord community](https://discord.gg/fjRp77KhQt)
